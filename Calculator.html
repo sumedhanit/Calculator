@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script>
+      function disp(val) {
+        document.getElementById("io").value += val;
+      }
+
+      function result() {
+        var a = document.getElementById("io").value;
+        var b = eval(a);
+        document.getElementById("io").value = b;
+      }
+      function clr() {
+        document.getElementById("io").value = "";
+      }
+    </script>
+
+    <style>
+      #io {
+        height: 50px;
+        width: 165px;
+        font-size: 50px;
+        background-color: gray;
+        color: black;
+      }
+      .btn {
+        height: 40px;
+        width: 40px;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div
+        style="
+          background-color: aqua;
+          height: auto;
+          width: fit-content;
+          margin: auto;
+        "
+      >
+        <input type="text" id="io" />
+        <br />
+        <button class="btn" value="9" onclick="disp('9')">9</button>
+        <button class="btn" value="8" onclick="disp('8')">8</button>
+        <button class="btn" value="7" onclick="disp('7')">7</button>
+        <button class="btn" value="+" onclick="disp('+')">+</button>
+        <br />
+        <button class="btn" value="6" onclick="disp('6')">6</button>
+        <button class="btn" value="5" onclick="disp('5')">5</button>
+        <button class="btn" value="4" onclick="disp('4')">4</button>
+        <button class="btn" value="-" onclick="disp('-')">-</button>
+        <br />
+        <button class="btn" value="3" onclick="disp('3')">3</button>
+        <button class="btn" value="2" onclick="disp('2')">2</button>
+        <button class="btn" value="1" onclick="disp('1')">1</button>
+        <button class="btn" value="*" onclick="disp('*')">*</button>
+        <br />
+        <button class="btn" value="." onclick="disp('.')">.</button>
+        <button class="btn" value="0" onclick="disp('0')">0</button>
+        <button class="btn" value="/" onclick="disp('/')">/</button>
+        <button class="btn" value="=" onclick="result()">=</button>
+        <br />
+        <button class="btn" value="CLR" onclick="clr()" style="width: 173px">
+          CLR
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
